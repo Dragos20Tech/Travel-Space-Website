@@ -6,6 +6,16 @@
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
+
+    --Bellefair-font-family: 'Bellefair', serif;
+    --barlowCondensed-font-family: 'Barlow Condensed', sans-serif;
+    --Barlow-family: 'Barlow', sans-serif;
+    --base-font-size: 16px;
+    --heading-font-size: 2rem;
+    --line-height: 1.5;
+    --font-color: #333;
+
+
 }
 
 
@@ -105,7 +115,7 @@ select {
 
 .flex {
     display: flex;
-    gap: var(--gap, 1rem);
+    gap: var(--gap, 2rem);
 }
 
 .grid {
@@ -141,3 +151,44 @@ select {
 .text-white{ color: hsl(var(--clr-white)); }
 
 .example-component { background-color: hsl(var(--clr-light) / 0.2);}
+
+
+/* ------------------------ */
+/* Custom properties        */
+/* ------------------------ */
+
+.pdl-4{ padding: 4rem; }
+
+.header{
+    padding-top: 4rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35rem;
+}
+
+.h1-system{
+    letter-spacing: 4.05px;
+    text-transform: uppercase;
+    font-family: var(--barlowCondensed-font-family);
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+
+.h2-text {
+    font-size: 1.75rem;
+    padding-top: 6.25rem;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4.72px;
+    font-family: var(--barlowCondensed-font-family);
+}
+
+.bellefair {
+    font-family: var(--Bellefair-font-family);
+}
+
+.barlow {
+    font-family: var(--Barlow-family);
+}

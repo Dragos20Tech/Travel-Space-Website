@@ -1,34 +1,67 @@
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="index.css">
     <title>Design system</title>
 </head>
-<body class="bg-dark">
-
-<!-- CHALLENGE ----------------
-     1. Give the first div a light blue background and dark text color
-     2. Give the second div a white background and dark text color
-     3. Give the third div a light blue background with a 20% alpha value
---------------------------- -->
+<body class="bg-dark text-white">
 
 <div class="container">
-    <h1>Design system</h1>
 
-
-    <div class="bg-light text-dark" style="padding: 1rem">
-        light blue bg, with dark text
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="24" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z"
+                  fill="#0B0D17"/>
+        </svg>
+        <h1 class="h1-system">Design system</h1>
     </div>
 
-    <div class="bg-white text-dark" style="padding: 1rem">
-        white bg, with dark text
-    </div>
+    <section id="colors">
+        <h2 class="h2-text"><span class="text-light"
+                                  style="font-weight:bold; opacity: 0.25;">01</span> colors</h2>
 
-    <div class="example-component text-white" style="padding: 1rem">
-        light blue bg at 20% opacity and white text
-    </div>
-
+        <div class="flex">
+            <div>
+                <div style="padding: 3rem 1rem 1rem; border: 2px solid white;background-color: rgb(11,13,23)">
+                    <div class="text-white">
+                        <p class="bellefair">#0B0D17</p>
+                    </div>
+                </div>
+                <div style="padding-top: 1rem" class="barlow">
+                    <p><span class="text-light">RGB</span><span class="pdl-4">11, 13, 23</span></p>
+                    <p><span class="text-light">HSL</span><span class="pdl-4"
+                                                                style="margin-left: 0.2rem">230, 35%, 7%</span></p>
+                </div>
+            </div>
+            <div>
+                <div style="padding: 3rem 1rem 1rem; border: 2px solid white;background-color: rgb(208,214,249)">
+                    <div class="text-dark">
+                        <p class="bellefair">#0B0D17</p>
+                    </div>
+                </div>
+                <div style="padding-top: 1rem" class="barlow">
+                    <p><span class="text-light">RGB</span><span class="pdl-4">208, 214, 249</span></p>
+                    <p><span class="text-light">HSL</span><span class="pdl-4"
+                                                                style="margin-left: 0.2rem">231, 77%, 90%</span></p>
+                </div>
+            </div>
+            <div>
+                <div style="padding: 3rem 1rem 1rem; border: 2px solid white;background-color: rgb(255,255,255)">
+                    <div class="text-dark">
+                        <p class="bellefair">#FFFFFF</p>
+                    </div>
+                </div>
+                <div style="padding-top: 1rem;" class="barlow">
+                    <p><span class="text-light">RGB</span><span class="pdl-4">255, 255, 255</span></p>
+                    <p><span class="text-light">HSL</span><span class="pdl-4"
+                                                                style="margin-left: 0.2rem">0, 0%, 100%</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
-<script src="index.pack.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
