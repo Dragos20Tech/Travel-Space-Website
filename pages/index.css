@@ -256,7 +256,7 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 }
 
 .primary-navigation {
-    justify-content: space-evenly;
+    justify-content: center;
     --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
@@ -268,8 +268,8 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 .primary-navigation a {
     text-decoration: none;
     position: relative;
-    padding-bottom: 0.5rem; /* Adjust as needed */
-    transition: border-color 0.3s ease; /* Smooth transition for the underline */
+    padding-bottom: 0.5rem;
+    transition: border-color 0.3s ease;
 }
 
 .primary-navigation a:after {
@@ -278,16 +278,16 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     bottom: -2rem;
     left: 0;
     width: 100%;
-    border-bottom: .2rem solid transparent; /* Initial transparent underline */
-    transition: border-color 0.3s ease; /* Smooth transition for the underline */
+    border-bottom: .2rem solid transparent;
+    transition: border-color 0.3s ease;
 }
 
 .primary-navigation a:hover:after {
-    border-color: hsl( var(--clr-white) / .25); /* Change to desired hover color */
+    border-color: hsl( var(--clr-white) / .25);
 }
 
 .primary-navigation .active a:after {
-    border-color: white; /* Change to desired active color */
+    border-color: white;
 }
 
 .primary-navigation a > span {
@@ -298,6 +298,33 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 .underline-indicators > * {
     padding: var(--underline-gap, 1rem) 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.tab-list button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.tab-list button:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: .2rem solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.tab-list [aria-selected="false"]:hover:after,
+.tab-list [aria-selected="false"]:focus:after {
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0.5 );
+}
+
+.tab-list [aria-selected="true"]:after {
+    border-bottom: .2rem solid hsl( var(--clr-white) / 1 );
 }
 
 /* ------------------------ */
