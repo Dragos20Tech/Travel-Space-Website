@@ -134,6 +134,22 @@ select {
     gap: var(--gap, 1rem);
 }
 
+/* This utility class is styling all direct children of an
+element with the class "flow," except for the first child
+
+- "First element has no space on the top
+and last element has no space on the bottom"
+
+- Using :where removes the specificity of :first-child
+since :first-child is a pseudo-element with a specificity
+value of 10.
+
+https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
+*/
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
@@ -192,6 +208,11 @@ select {
 .fs-600 {
     line-height: 1.1;
 }
+
+
+/* ------------------------ */
+/* Components               */
+/* ------------------------ */
 
 .numbered-title {
     font-family: var(--ff-sans-cond);
