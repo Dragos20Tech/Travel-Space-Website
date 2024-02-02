@@ -346,6 +346,28 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     background-color: hsl( var(--clr-white) / 1 );
 }
 
+.number-indicators{
+    flex-direction: column;
+}
+
+.number-indicators button {
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background: hsl( var(--clr-dark) / 0.175 );
+    border: 2px solid hsl( var(--clr-white) / 0.25 );
+    transition: border 0.3s ease;
+}
+
+.number-indicators [aria-selected="false"]:hover,
+.number-indicators [aria-selected="false"]:focus {
+    border: 5px solid hsl( var(--clr-white) / 1 );
+}
+
+.number-indicators [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1 );
+}
 
 /* ------------------------ */
 /* My custom properties     */
