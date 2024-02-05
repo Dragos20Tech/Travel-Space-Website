@@ -25,7 +25,7 @@
     --container-gap: 4rem;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 45em) {
     :root{
         --fs-800: 5rem;
         --fs-700: 2.5rem;
@@ -34,7 +34,7 @@
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 56em) {
     :root {
         --fs-800: 6.25rem;
         --fs-700: 3.5rem;
@@ -186,7 +186,7 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     text-align: center;
     display: grid;
     place-content: center;
-    row-gap: 10%;
+    row-gap: 12.5%;
     padding-inline: 1rem;
 }
 
@@ -194,7 +194,7 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     max-width: 50ch;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 56em) {
     .grid-container {
         text-align: left;
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
@@ -210,7 +210,7 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
         justify-self: end;
     }
 
-    .grid-container--home{
+    .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
     }
@@ -288,7 +288,7 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 /* ------------------------ */
 
 .large-button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
     display: inline-grid;
     place-items: center;
@@ -315,6 +315,19 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     opacity: 1;
     transform: scale(1.5);
 }
+
+@media (min-width: 45em) {
+    .large-button {
+        font-size: clamp(1.5rem, 4vw - 0.2rem ,2rem);
+    }
+}
+
+@media (min-width: 56em) {
+    .large-button {
+        font-size: 2rem;
+    }
+}
+
 
 .primary-navigation {
     --gap: 8rem;
@@ -431,6 +444,32 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 }
 
 /* ------------------------ */
+/* Page specific background */
+/* ------------------------ */
+
+body{
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 45em) {
+    .home {
+        background-size: cover;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media (min-width: 56em) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+}
+
+/* ------------------------ */
 /* My custom properties     */
 /* ------------------------ */
 
@@ -442,4 +481,8 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     justify-content: space-between;
     align-items: center;
     gap: 38rem;
+}
+
+.grid-container h1{
+    font-size: clamp(1.35rem, 6vw - 0.1rem, 2rem);
 }
