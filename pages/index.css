@@ -21,6 +21,8 @@
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
     --ff-sans-normal: "Barlow", sans-serif;
+
+    --container-gap: 4rem;
 }
 
 @media (min-width: 35em) {
@@ -181,12 +183,21 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 }
 
 .grid-container {
+    text-align: center;
     display: grid;
+    place-content: center;
+    row-gap: 10%;
+    padding-inline: 1rem;
+}
+
+.grid-container * {
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
     .grid-container {
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+        text-align: left;
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
         column-gap: var(--container-gap, 2rem);
     }
 
@@ -196,6 +207,12 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 
     .grid-container > *:last-child {
         grid-column: 3;
+        justify-self: end;
+    }
+
+    .grid-container--home{
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
 }
 
@@ -300,12 +317,11 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 }
 
 .primary-navigation {
-    justify-content: center;
     --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
-    margin-top: 6.25rem;
+    margin-top: 0;
     background: #161721;
 }
 
@@ -341,6 +357,7 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 
 .underline-indicators > * {
     padding: var(--underline-gap, 1rem) 0;
+    border : 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
