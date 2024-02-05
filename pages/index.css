@@ -153,8 +153,23 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 .container {
     padding-inline: 2em;
     margin-inline: auto;
-    max-width: 60rem;
+    max-width: 80rem;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    column-gap: var(--container-gap, 2rem);
+}
+
+.grid-container > *:first-child {
+    grid-column: 2;
+}
+
+.grid-container > *:last-child {
+    grid-column: 3;
+}
+
 /* Hide only visually, but have it available for screen readers */
 .sr-only {
     position: absolute;
