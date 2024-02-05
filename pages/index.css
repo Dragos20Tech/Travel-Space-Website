@@ -82,6 +82,9 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
 }
 
 /* A elements that don't have a class get default styles */
@@ -158,16 +161,21 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 
 .grid-container {
     display: grid;
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-    column-gap: var(--container-gap, 2rem);
 }
 
-.grid-container > *:first-child {
-    grid-column: 2;
-}
+@media (min-width: 45rem) {
+    .grid-container {
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+        column-gap: var(--container-gap, 2rem);
+    }
 
-.grid-container > *:last-child {
-    grid-column: 3;
+    .grid-container > *:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container > *:last-child {
+        grid-column: 3;
+    }
 }
 
 /* Hide only visually, but have it available for screen readers */
