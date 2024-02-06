@@ -334,6 +334,8 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     list-style: none;
     padding: 0;
     margin: 0;
+    background: hsl( var(--clr-dark) / 0.95);
+    backdrop-filter: blur(1.5rem);
 }
 
 @media (max-width: 45rem) {
@@ -341,11 +343,11 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
         --underline-gap: 0.5rem;
         position: fixed;
         z-index: 1000;
-        inset: 0 0 0 30%;
+        inset: 0 0 0 50%;
         list-style: none;
         padding: min(20rem, 15vh) 2rem;
         margin-top: 0;
-        background: #161721;
+        background: hsl(var(--clr-white) / .1);
         flex-direction: column;
     }
 
