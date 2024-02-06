@@ -356,10 +356,11 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 }
 
 .primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
     --underline-gap: 2rem;
     outline: none;
     list-style: none;
-    padding: 0 3rem;
+    padding: 0;
     margin: 0;
     background: hsl( var(--clr-dark) / 0.95);
 }
@@ -423,6 +424,10 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
 }
 
 @media (min-width: 45em) and (max-width: 56em) {
+    .primary-navigation{
+        padding-inline: 3rem;
+    }
+
     .primary-navigation span{
         display: none;
     }
