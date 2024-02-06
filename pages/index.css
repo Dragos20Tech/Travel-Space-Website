@@ -364,6 +364,10 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
         transform: translateX(100%);
     }
 
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+
     .mobile-nav-toggle {
         display: block;
         position: absolute;
@@ -373,20 +377,9 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
         background: transparent;
         background-image: url(./assets/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
-        background-position: center;
         width: 1.5rem;
         aspect-ratio: 1;
         border: 0;
-    }
-
-    .hide-mobile-nav {
-        display: none;
-    }
-
-    .show-mobile-nav {
-        display: block;
-        transform: translateX(0);
-        transition: transform 500ms ease-in-out;
     }
 
     .primary-navigation .active a:after {
