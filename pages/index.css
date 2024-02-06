@@ -331,10 +331,35 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     }
 }
 
+/* ------------------------ */
+/* Navigation               */
+/* ------------------------ */
+
+.primary-header{
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 45em) {
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+}
+
 .primary-navigation {
     --underline-gap: 2rem;
+    outline: none;
     list-style: none;
-    padding: 0;
+    padding: 0 3rem;
     margin: 0;
     background: hsl( var(--clr-dark) / 0.95);
 }
@@ -350,12 +375,12 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     display: none;
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 45em) {
     .primary-navigation {
         --underline-gap: 0.5rem;
         position: fixed;
         z-index: 1000;
-        inset: 0 0 0 50%;
+        inset: 0 0 0 40%;
         list-style: none;
         padding: min(20rem, 15vh) 2rem;
         margin-top: 0;
@@ -373,8 +398,8 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
         display: block;
         position: absolute;
         z-index: 2000;
-        right: 1rem;
-        top: 2rem;
+        right: 2rem;
+        top: 3rem;
         background: transparent;
         background-image: url(./assets/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
@@ -387,8 +412,19 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
         background-image: url(./assets/shared/icon-close.svg);
     }
 
+    .mobile-nav-toggle:focus-visible{
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+
     .primary-navigation .active a:after {
         border: 0;
+    }
+}
+
+@media (min-width: 45em) and (max-width: 56em) {
+    .primary-navigation span{
+        display: none;
     }
 }
 
