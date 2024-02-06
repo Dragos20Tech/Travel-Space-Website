@@ -423,13 +423,37 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     }
 }
 
-@media (min-width: 45em) and (max-width: 56em) {
-    .primary-navigation{
-        padding-inline: 3rem;
-    }
-
+@media (min-width: 45em) and (max-width: 56em) { /* Screen sizes between 720px and 896px */
     .primary-navigation span{
         display: none;
+    }
+}
+
+@media (min-width: 45em) {
+    .primary-navigation {
+        padding-inline: clamp(3rem, 7vw, 7rem) clamp(7rem, 12vw, 15rem);
+    }
+}
+
+@media (min-width: 56em) {
+    .primary-header::before {
+        content: '';
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 100%;
+        background: hsl(var(--clr-white) / .25);
+        order: 1;
+        z-index: 400;
+        margin-right: -5rem;
+    }
+
+    nav {
+        order: 2;
+    }
+
+    .primary-navigation {
+        margin-block: 2rem;
     }
 }
 
