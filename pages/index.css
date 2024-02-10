@@ -675,7 +675,7 @@ body {
         'tabs'
         'content';
     place-items: center;
-    /*padding-bottom: 3rem;*/
+    padding-bottom: 3rem;
 }
 
 .numbered-title {
@@ -751,6 +751,7 @@ body {
         '. title tabs .'
         '. image content. ';
         grid-template-columns: minmax(2rem, 1fr) minmax(0, 35rem) minmax(0, 30rem) minmax(2rem, 1fr);
+        padding-bottom: 0;
     }
 
     .grid-container--destination h1 {
