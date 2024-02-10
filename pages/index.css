@@ -178,6 +178,10 @@ https://scrimba.com/learn/spacetravel/spacing-coa764e37b20400837d149d7f
     margin-top: var(--flow-space, 1rem);
 }
 
+.flow-space--small {
+    --flow-space: 0.75rem;
+}
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
@@ -508,7 +512,7 @@ for users with disabilities.*/
 .primary-navigation a:after {
     content: '';
     position: absolute;
-    bottom: -0.5rem;
+    bottom: -2rem;
     left: 0;
     width: 100%;
     border-bottom: .2rem solid transparent;
@@ -545,7 +549,7 @@ for users with disabilities.*/
 .tab-list button:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: .3rem;
     left: 0;
     width: 100%;
     border-bottom: .2rem solid transparent;
@@ -628,6 +632,41 @@ body {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
 }
+
+.destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
+@media (min-width: 45em) {
+    .destination {
+        background-size: cover;
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+}
+
+@media (min-width: 56em) {
+    .destination {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
+}
+
+.crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+@media (min-width: 45em) {
+    .crew {
+        background-size: cover;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media (min-width: 56em) {
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+}
+
 
 /* ------------------------ */
 /* My custom properties     */
@@ -728,6 +767,10 @@ body {
 
 .grid-container--crew > .crew-details {
     grid-area: content;
+}
+
+.crew-details h2 {
+    color: hsl(var(--clr-white) / .5);
 }
 
 @media (min-width: 45em) {
