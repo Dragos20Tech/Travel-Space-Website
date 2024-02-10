@@ -719,7 +719,7 @@ body {
     grid-area: title;
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
     grid-area: image;
     max-width: clamp(10rem, 30vw + 3rem, 22rem);
     justify-self: center;
@@ -755,7 +755,7 @@ body {
     place-items: center;
 }
 
-.grid-container--crew > img {
+.grid-container--crew > picture {
     grid-area: image;
     max-width: 50%;
     border-bottom: 2px solid hsl(var(--clr-white) / .25);
@@ -801,7 +801,7 @@ body {
         justify-self: start;
     }
 
-    .grid-container--crew > img {
+    .grid-container--crew > picture {
         align-self: end;
         border-bottom: none;
     }
@@ -844,7 +844,7 @@ body {
         transform: translateY(-5rem);
     }
 
-    .grid-container--destination img {
+    .grid-container--destination picture {
         align-self: start;
         transform: translateY(-2rem);
     }
@@ -871,7 +871,7 @@ body {
         '. tabs image .';
     }
 
-    .grid-container--crew > img {
+    .grid-container--crew > picture {
         max-width: 80%;
         align-self: end;
         justify-self: end;
