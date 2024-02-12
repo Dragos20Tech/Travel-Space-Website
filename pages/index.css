@@ -696,7 +696,7 @@ body {
     padding-inline: 1rem;
 }
 
-.grid-container p:not([class]) {
+.grid-container p {
     max-width: 45ch;
 }
 
@@ -753,11 +753,12 @@ body {
         'tabs'
         'content';
     place-items: center;
+    padding-bottom: 3rem;
 }
 
 .grid-container--crew > picture {
     grid-area: image;
-    max-width: 50%;
+    max-width: 60%;
     border-bottom: 2px solid hsl(var(--clr-white) / .25);
 }
 
@@ -794,11 +795,17 @@ body {
         'content'
         'tabs'
         'image';
-        place-content: center;
+        place-items: center;
+        padding-bottom: 0;
+    }
+
+    .grid-container--crew > * {
+        margin-top: 2rem;
     }
 
     .grid-container--crew h1 {
         justify-self: start;
+        margin-inline: 2rem;
     }
 
     .grid-container--crew > picture {
@@ -832,7 +839,7 @@ body {
         justify-items: start;
         grid-template-areas:
         '. title tabs .'
-        '. image content. ';
+        '. image content .';
         grid-template-columns: minmax(2rem, 1fr) minmax(0, 35rem) minmax(0, 30rem) minmax(2rem, 1fr);
         padding-bottom: 0;
     }
@@ -866,19 +873,46 @@ body {
 
     .grid-container--crew {
         grid-template-areas:
-        '. title title .'
+        '. title image .'
         '. content image .'
         '. tabs image .';
+        grid-template-columns: minmax(2rem, 1fr) minmax(0, 35rem) minmax(0, 30rem) minmax(2rem, 1fr);
+        place-content: center;
+    }
+
+    .grid-container--crew *{
+        margin-top: 0;
+    }
+
+    .grid-container--crew h1 {
+        justify-self: start;
+        margin-inline: 0;
     }
 
     .grid-container--crew > picture {
-        max-width: 80%;
+        max-width: 78%;
         align-self: end;
         justify-self: end;
     }
 
     .dot-indicators {
         justify-self: start;
+    }
+
+    .grid-container--crew > .numbered-title {
+        align-self: start;
+    }
+    .dot-indicators,
+    .crew-details {
+        align-self: start;
+    }
+
+    .grid-container--crew > article {
+        justify-self: start;
+    }
+
+    .grid-container--crew > article > * {
+        margin-top: 1.5rem;
     }
 }
 
