@@ -830,10 +830,13 @@ body {
     .grid-container--home > *:last-child {
         grid-column: 3;
         justify-self: end;
+        align-self: end;
+        padding-bottom: 3rem;
     }
 
     .grid-container--home {
         align-items: center;
+        overflow: hidden;
     }
 
     .grid-container--destination {
