@@ -829,8 +829,7 @@ body {
     .grid-container--home > *:last-child {
         grid-column: 3;
         justify-self: end;
-        align-self: end;
-        padding-bottom: 3rem;
+        padding-top: 6rem;
     }
 
     .grid-container--home {
@@ -893,7 +892,7 @@ body {
     }
 
     .grid-container--crew > picture {
-        max-width: 78.5%;
+        max-width: 77%;
         align-self: end;
         justify-self: end;
     }
