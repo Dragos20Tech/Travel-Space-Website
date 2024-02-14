@@ -916,6 +916,6 @@ body {
     }
 }
 
-[role="tab"]:focus {
-    color: limegreen;
-}
+/*[role="tab"]:focus {*/
+/*    color: limegreen;*/
+/*}*/
