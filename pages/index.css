@@ -56,6 +56,17 @@
     box-sizing: border-box;
 }
 
+/* Change the outline color and style */
+*:focus {
+    outline: 3px solid red; /* Change 'red' to your desired color */
+    outline-offset: 5px;   /* Adjust the offset if needed */
+}
+
+/* Optionally, you can remove the outline for mouse users */
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
 /* Reset margins */
 body,
 h1,
@@ -587,20 +598,12 @@ for users with disabilities.*/
     background-color: hsl(var(--clr-white) / 1);
 }
 
-.dot-indicators [aria-selected="false"]:hover:after,
-.dot-indicators [aria-selected="false"]:focus:after {
-    border-bottom: none;
-}
-
-.dot-indicators [aria-selected="true"]:after {
-    border-bottom: none;
-}
-
 .number-indicators {
     flex-direction: column;
 }
 
 .number-indicators button {
+    font-size: larger;
     width: 4rem;
     height: 4rem;
     cursor: pointer;
@@ -616,7 +619,7 @@ for users with disabilities.*/
 
 .number-indicators [aria-selected="false"]:hover,
 .number-indicators [aria-selected="false"]:focus {
-    border: 5px solid hsl(var(--clr-white) / 1);
+    border: 3px solid hsl(var(--clr-white) / 1);
 }
 
 .number-indicators [aria-selected="true"] {
@@ -700,7 +703,6 @@ body {
         background-image: url(./assets/technology/background-technology-desktop.jpg);
     }
 }
-
 
 
 /* ------------------------ */
