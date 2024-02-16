@@ -5,6 +5,7 @@
 .prettierignore
 .idea
 /figma-design
+/pages/data.json
 preview.jpg
 README-template.md
 
