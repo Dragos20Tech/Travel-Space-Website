@@ -803,7 +803,7 @@ body {
 }
 
 .grid-container--tech {
-    row-gap: 2rem;
+    --flow-space: 2rem;
     grid-template-areas:
         'title'
         'image'
@@ -815,7 +815,6 @@ body {
 
 .grid-container--tech > picture {
     grid-area: image;
-
 }
 
 .grid-container--tech > .number-indicators {
@@ -834,11 +833,6 @@ body {
         justify-content: space-evenly;
     }
 
-    .grid-container--destination h1 {
-        justify-self: start;
-        margin-inline: 2rem;
-    }
-
     .grid-container--crew {
         grid-template-areas:
         'title'
@@ -849,18 +843,16 @@ body {
         padding-bottom: 0;
     }
 
-    .grid-container--crew > * {
-        margin-top: 2rem;
-    }
-
-    .grid-container--crew h1 {
-        justify-self: start;
-        margin-inline: 2rem;
-    }
-
     .grid-container--crew > picture {
         align-self: end;
         border-bottom: none;
+    }
+
+    .grid-container--destination h1,
+    .grid-container--crew h1,
+    .grid-container--tech h1 {
+        justify-self: start;
+        margin-inline: 2rem;
     }
 }
 
