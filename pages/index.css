@@ -950,7 +950,7 @@ body {
         grid-template-areas:
         '. title title image .'
         '. tabs content image .';
-        grid-template-columns: minmax(1rem, 1fr) minmax(0, 7rem) minmax(0, 30rem) minmax(0,30rem) minmax(1rem, 1fr);
+        grid-template-columns: auto minmax(0, 8rem) minmax(0, 35rem) minmax(0,20rem) auto;
         place-content: center;
         padding-bottom: 0;
     }
@@ -958,6 +958,10 @@ body {
     .grid-container--tech > .number-indicators {
         grid-area: tabs;
         flex-direction: column;
+    }
+
+    .grid-container--tech > .tech-details {
+        grid-area: content;
     }
 
     .grid-container--tech > picture {
