@@ -597,8 +597,8 @@ for users with disabilities.*/
 }
 
 .number-indicators button {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
     border-radius: 50%;
     background: hsl(var(--clr-dark) / 0.175);
@@ -675,6 +675,24 @@ body {
     }
 }
 
+.tech {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 45em) {
+    .tech {
+        background-size: cover;
+        background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+}
+
+@media (min-width: 56em) {
+    .tech {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+}
+
+
 
 /* ------------------------ */
 /* My custom properties     */
@@ -701,7 +719,7 @@ body {
     text-align: center;
     display: grid;
     place-items: center;
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
 }
 
 .grid-container p {
@@ -783,6 +801,32 @@ body {
 .crew-details h2 {
     color: hsl(var(--clr-white) / .5);
 }
+
+.grid-container--tech {
+    row-gap: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content';
+    place-content: space-evenly;
+    padding-bottom: 3rem;
+}
+
+.grid-container--tech > picture {
+    grid-area: image;
+
+}
+
+.grid-container--tech > .number-indicators {
+    grid-area: tabs;
+    flex-direction: row;
+}
+
+.grid-container--tech > .tech-details {
+    grid-area: content;
+}
+
 
 @media (min-width: 45em) {
     .destination-meta {
