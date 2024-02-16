@@ -8,7 +8,7 @@
     --clr-white: 0 0% 100%;
 
     /* font-sizes (using rem cuz of accessibility reasons)*/
-    --fs-900: clamp(6rem, 12vw + 1rem, 9.375rem);
+    --fs-900: clamp(6rem, 15vw + 1rem, 9.375rem);
     --fs-800: 3.5rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
@@ -346,11 +346,11 @@ for users with disabilities.*/
 /* ------------------------ */
 
 .large-button {
-    font-size: 1.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
     position: relative;
     display: inline-grid;
     place-items: center;
-    padding: 0 clamp(1rem, 8vw, 5rem);
+    padding: 0 clamp(2rem, 4vw, 4rem);
     border-radius: 50%;
     aspect-ratio: 1; /* 1:1 (width:height)*/
     text-decoration: none;
@@ -558,6 +558,10 @@ for users with disabilities.*/
 .tab-list [aria-selected="false"]:hover:after,
 .tab-list [aria-selected="false"]:focus:after {
     border-bottom: .2rem solid hsl(var(--clr-white) / 0.5);
+}
+
+.tab-list [aria-selected="true"] {
+    color: white;
 }
 
 .tab-list [aria-selected="true"]:after {
@@ -809,7 +813,7 @@ body {
         'image'
         'tabs'
         'content';
-    place-content: space-evenly;
+    place-items: center;
     padding-bottom: 3rem;
 }
 
@@ -839,7 +843,6 @@ body {
         'content'
         'tabs'
         'image';
-        place-items: center;
         padding-bottom: 0;
     }
 
@@ -884,7 +887,6 @@ body {
         grid-template-areas:
         '. title tabs .'
         '. image content .';
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0,30rem)) minmax(2rem, 1fr);
         padding-bottom: 0;
         place-content: center;
     }
